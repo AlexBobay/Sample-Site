@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bama's Quilts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" type = "text/css" href = "style.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("S0hYL2XLLEaMzJCMa"); 
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bama's Quilts</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for more information about our quilts.</p>
+        <form id="contact-form">
+            <label for="from_name">Your Name:</label>
+            <input type="text" id="from_name" name="from_name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br>
+            <input type="hidden" id="to_name" name="to_name" value="Recipient Name">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Bama's Quilts. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_3a8g0xr', 'template_86mlk55', this)
+                .then(function() {
+                    alert('Your message has been sent successfully!');
+                }, function(error) {
+                    alert('Failed to send the message. Please try again later.');
+                    console.error('EmailJS error:', error);
+                });
+        });
+    </script>
+</body>
+</html>
