@@ -21,8 +21,89 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 }
+nav a:hover {
+    color: #FFD700; 
+}
 .content {
     padding: 20px;
+    padding-bottom: 75px;
+    margin: 0 300px; /* Add margins on the left and right sides */
+}
+img {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+img:hover {
+    transform: scale(1.1); /* Zoom in effect */
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.image-container img {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.image-container img:hover {
+    transform: scale(1.1); /* Zoom in effect */
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #fff; /* Fully opaque text */
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 10;
+    bottom: 80%; /* Position the tooltip above the image */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px; /* Adjust the width as needed */
+    transition: opacity 0.3s;
+    opacity: 0; /* Initial opacity for transition */
+}
+
+.image-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+button:hover {
+    background-color: #45a049; /* Change to your desired hover color */
+    color: #FFD700; /* Change to your desired hover color */
 }
 footer {
     background-color: #4CAF50;
