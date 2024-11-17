@@ -102,8 +102,8 @@ button {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 button:hover {
-    background-color: #45a049; /* Change to your desired hover color */
-    color: #FFD700; /* Change to your desired hover color */
+    background-color: #45a049; 
+    color: #FFD700; 
 }
 footer {
     background-color: #4CAF50;
@@ -113,4 +113,37 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+.github-link {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1000; 
+}
+
+.github-logo {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    width: 50px; 
+    height: 30px; /* Maintain aspect ratio */
+    z-index: 1000; 
+}
+
+.linkedin-link {
+    position: fixed;
+    bottom: 20px; 
+    right: 60px; 
+    z-index: 1000; /* Ensure it is on top of other elements */
+}
+
+.linkedin-logo {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    width: 30px; 
+    height: 30px; /* Maintain aspect ratio */
+    z-index: 1000; 
+    filter: brightness(0) contrast(100%);
 }
